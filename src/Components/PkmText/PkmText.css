@@ -1,0 +1,19 @@
+.text-pkm-container{
+    background-color: rgba(13, 105, 185, 0.792);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    width: 380px;
+    color:#f1f1f1;
+    
+}
+
+
+.legendary-mythical{
+    background-color: rgb(224, 43, 43);
+    width: 80px;
+    color: #000000;
+    border-radius: 5px;
+    margin-top: 5px;
+    color: #f1f1f1;
+}

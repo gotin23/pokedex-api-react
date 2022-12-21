@@ -1,0 +1,20 @@
+footer{
+    width: 100%;
+   text-align: center;
+    color: #1e1d1d;
+    font-size: 18px;
+
+    font-family: sans-serif;
+   
+      
+}
+
+footer a {
+   
+    font-size: 18px;
+color:rgb(51, 91, 193);
+  font-weight: 600;
+}
+footer a:hover {
+    color: #3949d3;
+}

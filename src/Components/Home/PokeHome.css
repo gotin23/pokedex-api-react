@@ -1,0 +1,54 @@
+.cards-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+    margin:  auto;
+    margin-top: 30px;
+  
+}
+.home{
+    margin: auto;
+    width: 80%;
+}
+.search-input{
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+   
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 80%;
+    height: 40px;
+    border:1px solid black ;
+    outline: none;
+    min-width: 300px;
+}
+
+.search-input:focus{
+    
+border-color:rgb(51, 91, 193);
+border: 2px solid rgb(51, 91, 193);
+    
+      
+}
+
+.btn-pokedex{
+    min-width: 270px;
+    min-height: 270px;
+    border: none;
+    font-size: 38px;
+    font-weight: 700;
+    border-radius:50%;   
+    background-image: url("./banner_pkm.jpg");
+    background-size: cover;
+    background-position: 50%;
+    border: 3px solid black;
+    cursor: pointer;
+    
+   
+}
+

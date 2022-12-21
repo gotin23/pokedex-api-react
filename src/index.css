@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'pokemon-solid';
+  src: url(./font/Pokemon\ Solid.ttf);
+}
+@font-face {
+  font-family: 'pokemon-hollow';
+  src: url(./font/Pokemon\ Hollow.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+*,::after,::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+body {
+
+background: #f1f1f1;
+min-height: 100vh;
+max-width: 100vw;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+

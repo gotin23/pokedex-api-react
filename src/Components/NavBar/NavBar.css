@@ -1,0 +1,33 @@
+.nav-pkm{
+    z-index: 100;
+}
+.nav-pkm ul{
+
+margin-top: 10px;
+margin-bottom: 70px;
+list-style-type: none;
+display: flex;
+justify-content: center;
+
+
+}
+.nav-pkm h1{
+color: #f1f1f1;
+font-size: 50px;
+background-color: rgb(19, 65, 139);
+
+}
+
+
+.link-nav{
+    color: rgb(18, 17, 17);  
+    margin:0px 15px; 
+   text-decoration: none;
+    font-size: 18px;
+    font-family: sans-serif;
+   
+}
+.link-nav:hover{
+    color: rgb(209, 34, 34);   
+   
+}

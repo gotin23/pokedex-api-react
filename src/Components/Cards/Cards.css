@@ -1,0 +1,78 @@
+
+
+.pkm-card{
+    min-width: 160px;
+    height:150px ;
+    background: #fff;
+    margin: 4px 2px;
+    border-radius: 40px;
+    box-shadow:1px 1px 5px 0px rgba(0, 0, 0, 0.276);
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    cursor: pointer;
+    font-family: sans-serif;
+    color: #f1f1f1;
+}
+.pkm-card:hover{
+    
+
+   background: #f1f1f1;
+}
+.pkm-card h2{
+    position: absolute;
+  bottom: 5px;
+    left: 30px;
+    font-size: 10px;
+    padding: 4px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-weight: 800;
+    background: rgb(162, 77, 201);
+}
+.pokedex-number{
+    position: absolute;
+    left: 60px;
+    top: 3px;
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 3px;
+    background-color: #568be1;
+}
+.png-pokeball{
+    width: 30px;
+    position: absolute;
+    left: 9px;
+    top:9px;
+}
+
+.sprite-container{
+    
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pkm-card:hover  h2{
+    
+    background: rgb(196, 112, 235);
+}
+.pkm-card:hover  p{
+    
+    background: #78a2e5;
+}
+.sprite-basic{
+    transition: all 0.4s;
+}
+.pkm-card:hover  .sprite-basic{
+    
+   transform: scale(1.1);
+}
+.sprite-container img{
+    
+    width: 100%;
+   
+}
