@@ -21,7 +21,7 @@ function App() {
       <Loader />
       <NavBar />
       <Routes basename={process.env.PUBLIC_URL}>
-        <Route path="pokedex-api-react" element={<PokeHome />} />
+        <Route path="/" element={<PokeHome />} />
         <Route path="/pkm/:id" element={<Description />} />
         <Route path="/compare" element={<PkmCompare />} />
       </Routes>
