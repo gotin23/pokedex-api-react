@@ -14,7 +14,8 @@
     text-transform: uppercase;
     background: rgb(51, 91, 193);
     color: #f1f1f1;
-    font-family: sans-serif;
+    font-family: "Cocogoose";
+   
     font-size: 12px;
     border-radius: 5px;
     display: flex;
@@ -38,8 +39,8 @@
     align-items: center;
     flex-direction: column;
     border-radius: 40px;
-    box-shadow:1px 1px 5px 0px rgba(0, 0, 0, 0.276);
-    border: 1px solid rgb(0, 0, 0);
+    box-shadow:1px 1px 5px 0px rgba(0, 0, 0, 0.129);
+    border: 1px solid rgba(97, 95, 95, 0.424);
     padding: 10px;
     min-height: 240px;
   
@@ -50,14 +51,14 @@
   
   }
   .ability-hidden{
-    background: rgb(223, 227, 4);
+    background: rgb(234, 237, 58);
     color: #0a0a0a;
     border-radius: 5px;
     padding: 5px;
     margin-top: 3px;
-    font-family: sans-serif;
-    font-size: small;
+   font-family: "colatera";
     height: 20px;
+    font-weight: 100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,3 +120,21 @@
     cursor: pointer;
     font-size: 12px;
 }
+@media screen and (max-width: 1350px) {
+.ability-pkm-container{
+
+  box-shadow:1px 1px 5px 0px rgba(0, 0, 0, 0.129);
+  border-top: 1px solid rgba(97, 95, 95, 0.424);
+  
+}    
+        }
+@media screen and (max-width: 950px) {
+.ability-pkm-container{
+  border: none;
+  border-radius:0;
+margin-top: 0px;
+  box-shadow:1px 1px 5px 0px rgba(0, 0, 0, 0.129);
+  border-top: 1px solid rgba(97, 95, 95, 0.424);
+  
+}    
+        }

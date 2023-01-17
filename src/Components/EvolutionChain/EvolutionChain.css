@@ -9,6 +9,7 @@
     flex-wrap: wrap;
   
 }
+
 .container-evo-chain-img{
     position: relative;
     margin-top: 20px;
@@ -33,6 +34,11 @@
    
    
   
+}
+.evo-title{
+  font-family: "Cocogoose";
+  margin-top: 10px;
+  font-size: 20px;
 }
 .chain-evo-name{
 

@@ -87,6 +87,10 @@ export default function Abilities({ state }) {
                   dispatch({
                     type: "TOGGLEABILITY",
                     payload: true,
+                  }) +
+                  dispatch({
+                    type: "RESETABILITY",
+                    payload: [],
                   })
                 }
                 className="close-modal"

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import "./AllAttack.css";
 import pokemonTypeLogo from "../IconType/IconType";
@@ -7,6 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 import ArrowDown from "./arrow-down.png";
 import Cross from "./cross.png";
 import { getDetailMove } from "../../redux/articles/getDetailsMoves/GetDetailMoveReducer";
+import { useEffect } from "react";
 
 export default function AllAttack({ state }) {
   const { moves } = useSelector((state) => ({
@@ -24,13 +26,27 @@ export default function AllAttack({ state }) {
       type: "TOGGLEMOVES",
       payload: !toggleMoves,
     });
+    /*  
+      state.moves.forEach((move) => {
+        dispatch(getDetailMove(move.move.name));
+      });
+    }*/
+  };
+  useEffect(() => {
     if (moves.length === 0) {
       state.moves.forEach((move) => {
         dispatch(getDetailMove(move.move.name));
       });
     }
-  };
-
+  }, [state.moves]);
+  /* const changemove = useCallback(() => {
+    state.moves.forEach(
+      (move) => {
+        dispatch(getDetailMove(move.move.name));
+      },
+      [location.pathname]
+    );
+  }, [location.pathname]);*/
   return (
     <div className="all-attack-container">
       {/*logique pour le toogle de accord et changement de l'icone ouvrir/fermer */}
@@ -56,10 +72,10 @@ export default function AllAttack({ state }) {
           alt="icon-attack"
           style={{ width: "50px", marginBottom: "8px" }}
         />
-        <h2>All moves :</h2>
+        <h2>All moves </h2>
       </div>
       {/*logique pour affichage de toutes les attaques*/}
-      {!toggleMoves && moves.length === state.moves.length && (
+      {!toggleMoves && (
         <ul className="list-attack fadeIn">
           {moves.map((move) => {
             return (

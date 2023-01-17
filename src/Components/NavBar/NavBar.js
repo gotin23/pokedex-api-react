@@ -5,12 +5,11 @@ import { useDispatch } from "react-redux";
 
 export default function NavBar() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   //Function qui reset le state et toggle quand on retourne sur  l'accueil ou ailleur
 
   const navigateHome = () => {
-    dispatch({
+    /* dispatch({
       type: "RESET",
       payload: [],
     });
@@ -23,7 +22,7 @@ export default function NavBar() {
     dispatch({
       type: "RESETCHAINPKM",
       payload: [],
-    });
+    });*/
 
     dispatch({
       type: "TOGGLEMOVES",

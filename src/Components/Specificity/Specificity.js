@@ -17,24 +17,21 @@ export default function Specificity({ state }) {
       <div className="pkm-specificity fadeIn">
         <img src={state.officialSprite} alt="pokemon sprite" />
         <div className="logo-and-specificity">
-          <img src={pokeball} style={{ width: "60px" }} alt="pokeball-logo" />:{" "}
-          {newText}
+          <img src={pokeball} style={{ width: "60px" }} alt="pokeball-logo" />
+          <p>Name: {newText}</p>
         </div>
         <div className="logo-and-specificity">
           {" "}
-          <img
-            src={heightPkm}
-            style={{ width: "40px" }}
-            alt="icon-height"
-          />: {state.height / 10 + " m"}
+          <img src={heightPkm} style={{ width: "40px" }} alt="icon-height" />
+          <p>Height: {state.height / 10 + " m"}</p>
         </div>
         <div className="logo-and-specificity">
-          <img src={weightPkm} style={{ width: "40px" }} alt="icon-weight" /> :{" "}
-          {pkmWeight} kg
+          <img src={weightPkm} style={{ width: "40px" }} alt="icon-weight" />{" "}
+          <p>Weight: {pkmWeight} kg</p>
         </div>
         <div className="logo-and-specificity">
-          <img src={pokedex} style={{ width: "50px" }} alt="icon_pokedex" /> :{" "}
-          {"n°" + state.pokedex}
+          <img src={pokedex} style={{ width: "50px" }} alt="icon_pokedex" />
+          <p> Pokedex: {"n°" + state.pokedex}</p>
         </div>
       </div>
       <div className="pkm-type">

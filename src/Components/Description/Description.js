@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import "./Description.css";
 import Stats from "../Stats/Stats";
@@ -10,7 +11,6 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getPkmData } from "../../redux/articles/getPokemon/pkmData/pkmData";
 import { getPokemon } from "../../redux/articles/getPokemon/getPokemonReducer";
-import { getDescription } from "../../redux/articles/getDescriptionReducer/getDescriptionReducer";
 
 import pokeball from "./pokeball.png";
 import Cards from "../Cards/Cards";
@@ -23,13 +23,6 @@ export default function Description() {
   const { pokemon } = useSelector((state) => ({
     ...state.getPokemonReducer,
   }));
-  const { toggleLoader } = useSelector((state) => ({
-    ...state.toggle,
-  }));
-  const { toggle } = useSelector((state) => ({
-    ...state.toggle,
-  }));
-  console.log(toggleLoader);
 
   const { pkm } = useSelector((state) => ({
     ...state.pkmData,
@@ -48,8 +41,8 @@ export default function Description() {
   //chargement du state de base du pkm
   useEffect(() => {
     dispatch(getPkmData(name));
-  }, []);
-  console.log(pkm);
+  }, [location]);
+
   //toggle pour rendre visible le shiny
   const [toggleShiny, setToggleShiny] = useState(true);
   //toggle pour change l'affichage des stats
@@ -60,20 +53,19 @@ export default function Description() {
 
   //function pour changer le state de la page suivante
   const handleNextPage = () => {
-    console.log(toggle);
     dispatch({
       type: "TOGGLELOADER",
       payload: true,
     });
-    dispatch({
+    /*  dispatch({
       type: "RESET",
       payload: [],
     });
-
     dispatch({
-      type: "RESETCHAINPKM",
+      type: "RESETABILITY",
       payload: [],
-    });
+    });*/
+
     dispatch({
       type: "TOGGLEMOVES",
       payload: true,
@@ -85,14 +77,12 @@ export default function Description() {
           type: "TOGGLELOADER",
           payload: false,
         }),
-      1200
+      1000
     );
     dispatch({
       type: "TOGGLEABILITY",
       payload: true,
     });
-    dispatch(getPkmData(pokemon.results[pkm.id].name));
-    dispatch(getDescription(pokemon.results[pkm.id].name));
   };
   //function pour changer le state de la page prècédente
   const handlePreviousPage = () => {
@@ -100,15 +90,15 @@ export default function Description() {
       type: "TOGGLEABILITY",
       payload: true,
     });
-    dispatch({
+    /*    dispatch({
       type: "RESET",
       payload: [],
     });
-
     dispatch({
-      type: "RESETCHAINPKM",
+      type: "RESETABILITY",
       payload: [],
-    });
+    });*/
+
     dispatch({
       type: "TOGGLEMOVES",
       payload: true,
@@ -123,10 +113,8 @@ export default function Description() {
           type: "TOGGLELOADER",
           payload: false,
         }),
-      1200
+      1000
     );
-    dispatch(getPkmData(pokemon.results[pkm.id - 2].name));
-    dispatch(getDescription(pokemon.results[pkm.id - 2].name));
   };
 
   return (
@@ -213,7 +201,7 @@ export default function Description() {
             Switch
           </button>
           {/* Les stats format araigné */}
-          {pkm.length !== 0 && toggleStats && (
+          {pkm.length !== 0 && !toggleStats && (
             <Stats
               state={{
                 hp: pkm.stats[0].base_stat,
@@ -226,7 +214,7 @@ export default function Description() {
             />
           )}
           {/* Les stats format bar */}
-          {pkm.length !== 0 && !toggleStats && (
+          {pkm.length !== 0 && toggleStats && (
             <Stats2
               state={{
                 hp: pkm.stats[0].base_stat,
@@ -261,16 +249,8 @@ export default function Description() {
             />
           )}
           {/* bouton en forme de pokeball pour toggle le shiny*/}
-          {toggleShiny && (
-            <button onClick={handleToggleShiny}>
-              <img className="bounce" src={pokeball} alt="icon-pokeball" />
-            </button>
-          )}
-          {!toggleShiny && (
-            <button onClick={handleToggleShiny}>
-              <img className="bounce" src={pokeball} alt="icon-pokeball " />
-            </button>
-          )}
+          {toggleShiny && <button onClick={handleToggleShiny}>Shiny</button>}
+          {!toggleShiny && <button onClick={handleToggleShiny}>Normal</button>}
           {/* Affichage du composant avec la description du pkm et la chaine d'evolution*/}
           {pkm.length !== 0 && <PkmText state={{ name: name }} />}
         </div>

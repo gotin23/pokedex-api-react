@@ -1,9 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getEvolutionChain } from "../../redux/articles/getEvolutionChain/getEvolutionChainReducer";
-import { getDescription } from "../../redux/articles/getDescriptionReducer/getDescriptionReducer";
-import { getPkmData } from "../../redux/articles/getPokemon/pkmData/pkmData";
+
 import "./EvolutionChain.css";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
@@ -37,30 +37,21 @@ export default function EvolutionChain({ state }) {
       type: "RESET",
       payload: [],
     });
-
-    dispatch(getDescription(name));
     dispatch({
-      type: "RESETCHAINPKM",
+      type: "RESETABILITY",
       payload: [],
     });
+
     dispatch({
       type: "TOGGLEMOVES",
       payload: true,
     });
-    dispatch(getPkmData(name));
   };
 
   //Chargement du state a l'affichage de la page
   useEffect(() => {
     dispatch(getEvolutionChain(state.url));
-  }, []);
-
-  //function pour changer le state si on change de page
-  setTimeout(() => {
-    if (chain.length === 0) {
-      dispatch(getEvolutionChain(state.url));
-    }
-  }, 600);
+  }, [state.url]);
 
   const arrName =
     chain.length !== 0 &&
@@ -175,7 +166,7 @@ export default function EvolutionChain({ state }) {
       </div>
       {/* titre */}
       {chain.length !== 0 && chain.chain.evolves_to.length !== 0 && (
-        <h2>Evolution chain</h2>
+        <h2 className="evo-title">Evolution chain</h2>
       )}
     </>
   );

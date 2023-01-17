@@ -8,6 +8,10 @@ function getAbilityReducer(state = INITIAL_STATE, action) {
       return {
         ability: action.payload,
       };
+    case "RESETABILITY":
+      return {
+        ability: action.payload,
+      };
   }
   return state;
 }

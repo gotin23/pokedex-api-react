@@ -10,36 +10,37 @@
     background: #f1f1f1;
   min-width: 300px;
   border-radius: 40px;
-    box-shadow:1px 1px 5px 0px rgba(0, 0, 0, 0.276);
-    border: 1px solid rgb(0, 0, 0);
+  box-shadow:1px 1px 5px 0px rgba(0, 0, 0, 0.129);
+  border: 1px solid rgba(97, 95, 95, 0.424);
     min-height: 400px;
     color: #141414;
     font-size: 20px;
-    font-family: sans-serif;
+    font-family: "colatera";
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-weight: 700;
+   
     margin-top: 20px;
     background: #ffff;
    
 }
 .pkm-specificity img{
-   width: 110px;
+   width: 100px;
 
 }
 .pkm-specificity p{
   margin-bottom: 25px;
   margin-top: 10px;
+
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .pkm-type{
     margin-top: 10px;
     border-radius: 40px;
-    box-shadow:1px 1px 5px 0px rgba(0, 0, 0, 0.276);
-    border: 1px solid rgb(0, 0, 0);
+    box-shadow:1px 1px 5px 0px rgba(0, 0, 0, 0.129);
+    border: 1px solid rgba(97, 95, 95, 0.424);
     min-height: 220px;
     
     padding: 10px;
@@ -54,7 +55,9 @@
 .pkm-type p{
   margin-bottom: 25px;
   font-size: 25px;
-  font-weight: 600;
+  font-family: "colatera";
+  padding: 10px;
+ 
 }
 
 
@@ -63,6 +66,10 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+  }
+.logo-and-specificity img{
+margin-bottom: 15px;
+margin-right: 10px;
   }
 
 
@@ -75,11 +82,25 @@
   @media screen and (max-width: 950px) {
 .pkm-specificity{
   width: 100%;
+  border: none;
+  border-radius:0;
+
+  box-shadow:1px 1px 5px 0px rgba(0, 0, 0, 0.129);
+  border-top: 1px solid rgba(97, 95, 95, 0.424);
 }
 .container-pkm-specificity-types{
   width: 100%;
   order: 0;
+  
+}
+.pkm-type{
+  border: none;
+  border-radius:0;
+margin-top: 0px;
+  box-shadow:1px 1px 5px 0px rgba(0, 0, 0, 0.129);
+  border-top: 1px solid rgba(97, 95, 95, 0.424);
 }
       
     }
+    
  

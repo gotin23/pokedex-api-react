@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import "./PkmText.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -19,8 +20,9 @@ export default function PkmText({ state }) {
 
   //Chargement du state lors du premier affichage de la page
   useEffect(() => {
+    console.log("ok");
     dispatch(getDescription(name));
-  }, []);
+  }, [location]);
 
   //Array filtré des description du pkm uniquement en anglais
   const language =
@@ -31,7 +33,8 @@ export default function PkmText({ state }) {
     <>
       {/*Affichage de la description du pkm,  */}
       <div className="text-pkm-container fadeIn">
-        {description.length !== 0 && language[0].flavor_text.replace("\f", "")}
+        {description.length !== 0 &&
+          language[0].flavor_text.replace("\f", "").replace("é", "E")}
         {/*et logique pour savoir si le pkm est légendaire ou mythique*/}
         {description.is_legendary && (
           <p className="legendary-mythical">Legendary</p>
