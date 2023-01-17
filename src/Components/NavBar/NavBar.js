@@ -36,7 +36,7 @@ export default function NavBar() {
         <ul>
           <NavLink
             onClick={navigateHome}
-            to="/pokedex-api-react"
+            to="/"
             className="link-nav"
             style={{ cursor: "pointer" }}
           >
