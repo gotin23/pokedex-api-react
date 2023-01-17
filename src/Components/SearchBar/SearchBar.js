@@ -1,8 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import Cards from "../Cards/Cards";
 import { v4 as uuidv4 } from "uuid";
 import "./SearchBar.css";
 import { getFirstPKM } from "../../redux/articles/getPkmToCompareReducer/getPkmToCompareReducer";
@@ -13,9 +11,6 @@ export default function SearchBar({ state }) {
   const dispatch = useDispatch();
   const { pokemon } = useSelector((state) => ({
     ...state.getPokemonReducer,
-  }));
-  const { firstPkmToCompare, secondPkmToCompare } = useSelector((state) => ({
-    ...state.getPkmToCompareReducer,
   }));
   // Gestion de l'input de la searchBar
   const [searchPkm, setSearchPkm] = useState({ search: "" });

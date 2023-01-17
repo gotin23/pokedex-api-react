@@ -1,6 +1,4 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import "./App.css";
 import PokeHome from "./Components/Home/PokeHome";
 import NavBar from "./Components/NavBar/NavBar";

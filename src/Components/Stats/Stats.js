@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
 import Chart from "react-apexcharts";
 import "./Stats.css";
 import Loader from "../Loader/Loader";
@@ -20,7 +19,7 @@ export default function Stats({ state }) {
     },
   ];
 
-  const [statePkm, setStatePkm] = useState({
+  const [statePkm] = useState({
     options: {
       chart: {
         height: 350,

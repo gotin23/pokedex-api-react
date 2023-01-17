@@ -12,7 +12,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { getPkmData } from "../../redux/articles/getPokemon/pkmData/pkmData";
 import { getPokemon } from "../../redux/articles/getPokemon/getPokemonReducer";
 
-import pokeball from "./pokeball.png";
 import Cards from "../Cards/Cards";
 import doubleArrow from "./double-arrow.svg";
 

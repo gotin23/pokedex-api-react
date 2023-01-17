@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
 import Chart from "react-apexcharts";
 
 export default function Stats2({ state }) {
@@ -18,7 +17,7 @@ export default function Stats2({ state }) {
     },
   ];
 
-  const [statePkm, setStatePkm] = useState({
+  const [statePkm] = useState({
     options: {
       chart: {
         type: "bar",

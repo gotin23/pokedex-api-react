@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavBar.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 export default function NavBar() {

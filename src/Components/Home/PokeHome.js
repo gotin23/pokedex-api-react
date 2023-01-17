@@ -23,6 +23,7 @@ export default function Home() {
     if (pokemon.length === 0) {
       dispatch(getPokemon());
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // Gestion de l'input de la searchBar
   const [searchPkm, setSearchPkm] = useState({ search: "" });
