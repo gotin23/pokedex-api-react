@@ -19,7 +19,7 @@ export default function PkmCompare() {
   }, []);
   useEffect(() => {
     if (firstPkmToCompare.length === 0) {
-      dispatch(getFirstPKM("mewtwo"));
+      dispatch(getFirstPKM("mew"));
     }
   }, []);
   useEffect(() => {
